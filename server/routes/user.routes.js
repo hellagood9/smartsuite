@@ -1,6 +1,6 @@
 const express = require("express");
 const User = require("../models/User");
-const { getToken } = require("../utils/auth");
+const getToken = require("../utils/auth");
 
 const router = express.Router();
 
@@ -59,7 +59,7 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-router.get("/create-admin", async (req, res) => {
+router.post("/create-admin", async (req, res) => {
   try {
     const user = new User({
       name: "john",
