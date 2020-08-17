@@ -4,10 +4,6 @@ const path = require("path");
 const morgan = require("morgan");
 const cors = require("cors");
 
-// Load and mount routes
-const routes = require("./routes");
-app.use("/api", routes);
-
 // DB connection
 require("./config/db.config");
 
@@ -28,6 +24,10 @@ app.use(express.urlencoded({ extended: true })); //Parse URL-encoded bodies
 app.use(express.static(path.join(__dirname, "public"))); //Serves resources from public folder
 app.use(morgan("dev"));
 app.use(cors(corsOptions));
+
+// Load and mount routes
+const routes = require("./routes");
+app.use("/api", routes);
 
 const PORT = 5000;
 
