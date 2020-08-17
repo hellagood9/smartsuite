@@ -1,12 +1,8 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.scss";
 
 function App() {
-  return (
-    <div className="App">
-      SmartSuite
-    </div>
-  );
+  return <div className="App">SmartSuite</div>;
 }
 
 export default App;
