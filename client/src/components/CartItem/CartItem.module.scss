@@ -1,0 +1,92 @@
+@import "../../styles/animations";
+
+.subtotal {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 16px;
+  letter-spacing: 1px;
+}
+
+.product {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f2f2f2;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  &__excerpt {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.75);
+    letter-spacing: 0;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+  }
+
+  &__image {
+    img {
+      height: 112px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    height: 40px;
+  }
+}
+
+.price {
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 16px;
+}
+
+.price--discount {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 0;
+  line-height: 16px;
+  text-decoration: line-through;
+  margin-right: 16px;
+}
+
+.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: 24px;
+  padding: 0 16px;
+  margin: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  line-height: 16px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  color: #b5b5b5;
+
+  &:hover {
+    color: #ff7575;
+  }
+}
