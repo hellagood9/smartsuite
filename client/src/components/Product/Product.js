@@ -58,7 +58,7 @@ const Product = ({ product }) => {
       <Link to={`/products/${_id}`}>
         <div className={styles["product__body"]}>
           <div className={styles["product__image"]}>
-            <img src={`/img/${imgUrl}`} alt={title} />
+            <img loading="lazy" src={`/img/${imgUrl}`} alt={title} />
           </div>
 
           <Rating rating={rating} />
