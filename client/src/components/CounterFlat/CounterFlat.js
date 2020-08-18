@@ -37,8 +37,8 @@ CounterFlat.propTypes = {
   incrementCount: PropTypes.func,
   decrementCount: PropTypes.func,
   qty: PropTypes.number.isRequired,
-  disabledInc: PropTypes.func,
-  disabledDec: PropTypes.func,
+  disabledInc: PropTypes.bool,
+  disabledDec: PropTypes.bool,
 };
 
 export default CounterFlat;
