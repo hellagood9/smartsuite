@@ -21,7 +21,7 @@ module.exports = {
         useCreateIndex: true,
       })
       .then(() => {
-        return Product.deleteMany(), User.deleteMany();
+        return Product.deleteMany();
       })
       .then(() => {
         const promises = [];
@@ -37,6 +37,9 @@ module.exports = {
 
         console.log("Products synchronized successfully!");
         return Promise.all(promises);
+      })
+      .then(() => {
+        return User.deleteMany();
       })
       .then(() => {
         const promises = [];

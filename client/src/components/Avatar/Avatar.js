@@ -11,7 +11,7 @@ const Avatar = ({ user }) => {
     <div className={styles["avatar"]}>
       <Link to="/">
         <span className={styles["avatar__img"]}>
-          <img src={`/img/${imgUrl}`} alt={name} />
+          <img loading="lazy" src={`/img/${imgUrl}`} alt={name} />
         </span>
 
         <div className={styles["user"]}>
