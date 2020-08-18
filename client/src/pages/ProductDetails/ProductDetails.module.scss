@@ -1,0 +1,75 @@
+@import "../../styles/animations";
+
+.product {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  &__excerpt,
+  &__category {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.75);
+    letter-spacing: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+  }
+
+  &__excerpt {
+    max-width: 70%;
+  }
+
+  &__category {
+    font-size: 15px;
+    font-weight: 500;
+    color: #006f41;
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+
+  .price {
+    color: #282828;
+    font-weight: 700;
+    font-size: 24px;
+
+    &--discount {
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.3);
+      letter-spacing: 0;
+      line-height: 16px;
+      text-decoration: line-through;
+      margin-right: 16px;
+    }
+  }
+}
+
+.qty-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: center;
+  margin: 8px 0;
+}

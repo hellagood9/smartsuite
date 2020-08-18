@@ -22,7 +22,8 @@
     ],
     "rules": {
         "no-sparse-arrays": "off",
-        "no-unused-vars": "warn"
+        "no-unused-vars": "warn",
+        "no-case-declarations": "off"
     },
     "settings": {
         "react": {

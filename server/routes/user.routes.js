@@ -50,12 +50,10 @@ router.post("/signup", async (req, res) => {
         isAdmin: newUser.isAdmin,
         token: getToken(newUser),
       });
-    } else {
-      res.status(401).json({ msg: "Invalid User data" });
     }
   } catch (error) {
     console.error(error.message);
-    res.json({ msg: error.message });
+    res.status(401).json({ msg: "Invalid User data" });
   }
 });
 
