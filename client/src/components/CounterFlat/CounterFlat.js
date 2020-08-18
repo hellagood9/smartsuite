@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import styles from "./CounterFlat.module.scss";
 
@@ -30,6 +31,14 @@ const CounterFlat = ({
       </div>
     </>
   );
+};
+
+CounterFlat.propTypes = {
+  incrementCount: PropTypes.func,
+  decrementCount: PropTypes.func,
+  qty: PropTypes.number.isRequired,
+  disabledInc: PropTypes.func,
+  disabledDec: PropTypes.func,
 };
 
 export default CounterFlat;

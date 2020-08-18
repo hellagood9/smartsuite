@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 
@@ -67,12 +68,18 @@ const CartItem = ({ items }) => {
                     <div className={styles["product__excerpt"]}>{excerpt}</div>
 
                     <div className={styles["product__price"]}>
-                      {priceDiscount !== 0 && (
-                        <span className={styles["price--discount"]}>
-                          ${priceDiscount}
-                        </span>
+                      {priceDiscount !== 0 ? (
+                        <>
+                          <span className={styles["price--discount"]}>
+                            ${price}
+                          </span>
+                          <span className={styles["price"]}>
+                            ${priceDiscount}
+                          </span>
+                        </>
+                      ) : (
+                        <span className={styles["price"]}>${price}</span>
                       )}
-                      <span className={styles["price"]}>${price}</span>
                     </div>
                   </div>
                 </div>
@@ -110,6 +117,14 @@ const CartItem = ({ items }) => {
         })}
     </ul>
   );
+};
+
+CartItem.defaultProps = {
+  items: [],
+};
+
+CartItem.propTypes = {
+  items: PropTypes.array.isRequired,
 };
 
 export default React.memo(CartItem);

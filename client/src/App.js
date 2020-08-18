@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+import { selectSignedInUser } from "./store/user/user.selectors";
+
 import "./App.scss";
 
 import Spinner from "./components/Spinner/Spinner";
@@ -21,8 +23,8 @@ const SignUp = lazy(() => import("./pages/SignUp/SignUp"));
 const Order = lazy(() => import("./pages/Order/Order"));
 
 const App = () => {
-  const userSignedIn = useSelector((state) => state.userSignedIn);
-  const { userInfo } = userSignedIn;
+  const allState = useSelector((state) => state);
+  const userInfo = selectSignedInUser(allState);
 
   return (
     <div className="App">

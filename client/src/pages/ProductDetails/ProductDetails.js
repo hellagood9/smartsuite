@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { useSelector, useDispatch } from "react-redux";
@@ -103,6 +104,17 @@ const ProductDetails = (props) => {
       </div>
     </Layout>
   );
+};
+
+ProductDetails.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.any.isRequired,
+    }),
+  }),
+  history: PropTypes.shape({
+    push: PropTypes.string.isRequired,
+  }),
 };
 
 export default ProductDetails;

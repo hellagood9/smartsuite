@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 import Button from "../Button/Button";
 import Alert from "../Alert/Alert";
@@ -48,6 +49,18 @@ const ItemCount = ({ initial = 1, min = 1, max, handleClick }) => {
       )}
     </>
   );
+};
+
+ItemCount.defaultProps = {
+  initial: 1,
+  min: 1,
+};
+
+ItemCount.propTypes = {
+  initial: PropTypes.number,
+  min: PropTypes.any,
+  max: PropTypes.any,
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default ItemCount;

@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+import { selectSignedInUser } from "../../store/user/user.selectors";
+
 import Avatar from "../Avatar/Avatar";
 import Cart from "../Cart/Cart";
 import Logo from "../Logo/Logo";
@@ -10,7 +12,8 @@ import Search from "../Search/Search";
 import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
-  const { userInfo } = useSelector((state) => state.userSignedIn);
+  const allState = useSelector((state) => state);
+  const userInfo = selectSignedInUser(allState);
 
   return (
     <header className={styles["top-nav"]}>
