@@ -100,7 +100,7 @@ const ProductDetails = (props) => {
           {stock === 0 && <span>This product is out of stock</span>}
         </div>
 
-        {imgUrl && <img src={`/img/${imgUrl}`} alt={title} />}
+        {imgUrl && <img loading="lazy" src={`/img/${imgUrl}`} alt={title} />}
       </div>
     </Layout>
   );
