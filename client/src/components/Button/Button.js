@@ -28,6 +28,7 @@ Button.propTypes = {
   type: PropTypes.string,
   icon: PropTypes.elementType,
   block: PropTypes.bool,
+  handleClick: PropTypes.func.isRequired,
   disabled: PropTypes.any,
 };
 

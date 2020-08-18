@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+import { selectCartItemsCount } from "../../store/cart/cart.selectors";
+
 import { MdShoppingBasket } from "react-icons/md";
 import styles from "./Cart.module.scss";
 
 const Cart = () => {
-  const cartItems = useSelector((state) => state.cart.cartItems);
-  const cartQty = cartItems && cartItems.reduce((ac, cv) => ac + cv.qty, 0);
-
-  console.log("cartItems", cartItems);
+  const allState = useSelector((state) => state);
+  const cartQty = selectCartItemsCount(allState);
 
   return (
     <div className={styles["cart"]}>

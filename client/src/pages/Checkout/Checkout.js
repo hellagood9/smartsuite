@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -67,6 +68,18 @@ const Checkout = (props) => {
       </div>
     </Layout>
   );
+};
+
+Checkout.propTypes = {
+  location: PropTypes.shape({
+    data: PropTypes.shape({
+      productId: PropTypes.any.isRequired,
+      qty: PropTypes.number.isRequired,
+    }),
+  }),
+  history: PropTypes.shape({
+    push: PropTypes.string.isRequired,
+  }),
 };
 
 export default Checkout;

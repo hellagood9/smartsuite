@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { useSelector } from "react-redux";
@@ -80,6 +81,20 @@ const Product = ({ product }) => {
       </Link>
     </li>
   );
+};
+
+Product.propTypes = {
+  product: PropTypes.shape({
+    _id: PropTypes.any.isRequired,
+    title: PropTypes.string.isRequired,
+    excerpt: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    priceDiscount: PropTypes.number.isRequired,
+    imgUrl: PropTypes.string.isRequired,
+    liked: PropTypes.bool.isRequired,
+    rating: PropTypes.number.isRequired,
+    stock: PropTypes.number.isRequired,
+  }),
 };
 
 export default React.memo(Product);
