@@ -7,6 +7,9 @@ const cors = require("cors");
 // DB connection
 require("./config/db.config");
 
+// Seeder
+const seeder = require("./bin/seeds/seeder");
+
 // Allow *specified origins* to make requests to the API
 const whitelist = ["http://localhost:5000", "http://localhost:3000"];
 
@@ -31,6 +34,9 @@ app.use("/api", routes);
 
 const PORT = 5000;
 
-app.listen(5000, () => {
-  console.log(`Server running at ${PORT}`);
+// Synchronize DB and then start the server
+seeder.syncData().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server running at ${PORT}`);
+  });
 });

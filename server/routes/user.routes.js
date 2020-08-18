@@ -19,6 +19,7 @@ router.post("/signin", async (req, res) => {
         name: user.name,
         email: user.email,
         isAdmin: user.isAdmin,
+        imgUrl: user.imgUrl,
         token: getToken(user),
       });
     } else {
@@ -48,6 +49,7 @@ router.post("/signup", async (req, res) => {
         name: newUser.name,
         email: newUser.email,
         isAdmin: newUser.isAdmin,
+        imgUrl: newUser.imgUrl,
         token: getToken(newUser),
       });
     }

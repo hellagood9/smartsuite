@@ -78,7 +78,7 @@ Checkout.propTypes = {
     }),
   }),
   history: PropTypes.shape({
-    push: PropTypes.string.isRequired,
+    push: PropTypes.func.isRequired,
   }),
 };
 
