@@ -24,18 +24,18 @@ const connectToDB = async () => {
   }
 };
 
-const dropCollection = async (collection) => {
-  const collectionName = collection.collection.collectionName;
-  try {
-    console.log(`Removing all documents from "${collectionName}" collection`);
-    await collection.deleteMany();
-  } catch (error) {
-    console.log(
-      `Error when trying to delete the collection "${collectionName}"`,
-      error
-    );
-  }
-};
+// const dropCollection = async (collection) => {
+//   const collectionName = collection.collection.collectionName;
+//   try {
+//     console.log(`Removing all documents from "${collectionName}" collection`);
+//     await collection.deleteMany();
+//   } catch (error) {
+//     console.log(
+//       `Error when trying to delete the collection "${collectionName}"`,
+//       error
+//     );
+//   }
+// };
 
 const checkCollectionExist = async (collection, data, dataPropForErrorInfo) => {
   try {
