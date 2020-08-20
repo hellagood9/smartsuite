@@ -12,8 +12,8 @@ const Cart = () => {
   const cartQty = selectCartItemsCount(allState);
 
   return (
-    <div className={styles["cart"]}>
-      <Link to="/cart">
+    <Link to="/cart" title="Go to cart">
+      <div className={styles["cart"]}>
         <MdShoppingBasket className={styles["cart__icon"]} />
 
         {cartQty > 0 && (
@@ -21,8 +21,8 @@ const Cart = () => {
             <span>{cartQty}</span>
           </div>
         )}
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 

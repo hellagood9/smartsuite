@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { useSelector } from "react-redux";
 
-import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
-
 import Rating from "../Rating/Rating";
 
 import styles from "./Product.module.scss";
+import Favorite from "../Favorite/Favorite";
 
 const Product = ({ product }) => {
   const itemsInCart = useSelector((state) => state.cart.cartItems);
@@ -46,13 +45,7 @@ const Product = ({ product }) => {
           <div className={styles["product-badge"]}>{isInCart.qty}</div>
         )}
 
-        <div className={styles["product-liked"]}>
-          {liked ? (
-            <MdFavorite />
-          ) : (
-            <MdFavoriteBorder style={{ color: "#848484" }} />
-          )}
-        </div>
+        <Favorite liked={liked} />
       </div>
 
       <Link to={`/products/${_id}`}>

@@ -6,6 +6,9 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  overflow-y: scroll;
+}
 a {
   text-decoration: none;
   color: inherit;

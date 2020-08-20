@@ -7,11 +7,11 @@
   border-radius: 8px;
   background: #fff;
   transition: transform 0.3s ease, width 0.3s ease-in;
-  cursor: pointer;
   z-index: 1;
 
   a {
     text-decoration: none;
+    cursor: pointer;
   }
 
   @media only screen and (max-width: 1200px) {
@@ -86,6 +86,7 @@
 .product__image {
   display: flex;
   justify-content: center;
+  height: 120px;
 }
 
 .product__image img {
@@ -151,8 +152,8 @@
 }
 
 .price--discount {
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.75);
   letter-spacing: 0;
   line-height: 16px;
   text-decoration: line-through;
@@ -165,14 +166,14 @@
 }
 
 .outOfStock {
-  .product__image img {
-    opacity: 0.25;
+  .product__image img,
+  .product__title,
+  .product__rating {
+    opacity: 0.75;
   }
 
-  .product__title,
-  .product__excerpt,
-  .product__price {
-    opacity: 0.7;
+  .product__excerpt {
+    opacity: 0.85;
   }
 }
 
