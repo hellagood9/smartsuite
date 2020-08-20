@@ -9,7 +9,7 @@ module.exports = {
       stock: 10,
       rating: 1,
       liked: false,
-      imgUrl: "espresso.png",
+      imgUrl: "espresso.webp",
     },
     {
       category: "Bakery",
@@ -20,7 +20,7 @@ module.exports = {
       stock: 4,
       rating: 3,
       liked: true,
-      imgUrl: "chocolate-muffin.png",
+      imgUrl: "chocolate-muffin.webp",
     },
     {
       category: "Cold Brews",
@@ -31,7 +31,7 @@ module.exports = {
       stock: 7,
       rating: 1,
       liked: false,
-      imgUrl: "iced-coffee.png",
+      imgUrl: "iced-coffee.webp",
     },
     {
       category: "Lunch",
@@ -43,7 +43,7 @@ module.exports = {
       stock: 0,
       rating: 4,
       liked: false,
-      imgUrl: "chicken-veggie-pie.png",
+      imgUrl: "chicken-veggie-pie.webp",
     },
     {
       category: "Bakery",
@@ -55,7 +55,7 @@ module.exports = {
       stock: 3,
       rating: 5,
       liked: false,
-      imgUrl: "chocolate-chip-cookie.png",
+      imgUrl: "chocolate-chip-cookie.webp",
     },
     {
       category: "Creme Frappuccino",
@@ -67,7 +67,7 @@ module.exports = {
       stock: 10,
       rating: 3,
       liked: false,
-      imgUrl: "hot-chocolate.png",
+      imgUrl: "hot-chocolate.webp",
     },
     {
       category: "Coffee Frappuccino",
@@ -79,7 +79,7 @@ module.exports = {
       stock: 2,
       rating: 4,
       liked: false,
-      imgUrl: "caramel-apple-spice.png",
+      imgUrl: "caramel-apple-spice.webp",
     },
     {
       category: "Hot Coffees",
@@ -91,7 +91,7 @@ module.exports = {
       stock: 2,
       rating: 2,
       liked: true,
-      imgUrl: "cocoa-cloud-macchiato.png",
+      imgUrl: "cocoa-cloud-macchiato.webp",
     },
   ],
 };
