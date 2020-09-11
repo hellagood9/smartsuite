@@ -85,7 +85,7 @@ module.exports = {
       category: "Hot Coffees",
       title: "Cocoa Cloud Macchiato",
       excerpt:
-        "Our Cloud Macchiato: light and airy with layers of fluffy foam*, cascading espresso, flavored toffee nut syrup",
+        "Light and airy with layers of fluffy foam, cascading espresso, flavored toffee nut syrup",
       price: 3.8,
       priceDiscount: 3.25,
       stock: 2,

@@ -40,9 +40,14 @@
   }
 
   &__category {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
+    text-transform: uppercase;
     color: #006f41;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__more {
@@ -74,4 +79,25 @@
   justify-content: space-between;
   justify-content: center;
   margin: 8px 0;
+}
+
+.navigate {
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  svg {
+    color: #c0c0c0;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
 }

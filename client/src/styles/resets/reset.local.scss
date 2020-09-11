@@ -9,6 +9,9 @@
 html {
   overflow-y: scroll;
 }
+body {
+  overflow-x: hidden;
+}
 a {
   text-decoration: none;
   color: inherit;

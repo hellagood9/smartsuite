@@ -62,7 +62,7 @@ const CartItem = ({ items }) => {
                     <img loading="lazy" src={`/img/${imgUrl}`} alt={title} />
                   </div>
 
-                  <div>
+                  <div className={styles["wrapper"]}>
                     <div className={styles["product__title"]}>{title}</div>
 
                     <div className={styles["product__excerpt"]}>{excerpt}</div>

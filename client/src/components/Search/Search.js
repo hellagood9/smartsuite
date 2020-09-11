@@ -15,6 +15,7 @@ const Search = () => {
         id="search"
         type="text"
         placeholder="Search for items, categories and more …"
+        autoComplete="off"
       />
     </div>
   );

@@ -51,17 +51,19 @@ const Checkout = (props) => {
           <div className={styles["checkout__actions"]}>
             <h4 className={styles["subtotal"]}>
               Subtotal: $
-              {cartItems &&
-                cartItems
-                  .reduce((ac, cv) => ac + cv.price * cv.qty, 0)
-                  .toFixed(2)}
+              <span>
+                {cartItems &&
+                  cartItems
+                    .reduce((ac, cv) => ac + cv.price * cv.qty, 0)
+                    .toFixed(2)}
+              </span>
             </h4>
 
             <Button
               disabled={!cartItems.length}
               type="terciary"
               handleClick={handlerCheckout}
-              label="Proceed to Checkout"
+              label="Checkout"
             />
           </div>
         )}

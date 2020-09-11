@@ -9,9 +9,11 @@ import { fetchProduct } from "../../store/products/product.actions";
 import Layout from "../../components/Common/Layout/Layout";
 import Counter from "../../components/Counter/Counter";
 import Rating from "../../components/Rating/Rating";
+import Spinner from "../../components/Spinner/Spinner";
+
+import { MdViewModule } from "react-icons/md";
 
 import styles from "./ProductDetails.module.scss";
-import Spinner from "../../components/Spinner/Spinner";
 
 const ProductDetails = (props) => {
   const { id: productId } = props.match.params;
@@ -62,6 +64,10 @@ const ProductDetails = (props) => {
           styles["fast"]
         )}
       >
+        <Link to="/" className={styles["navigate"]}>
+          <MdViewModule /> View all products
+        </Link>
+
         <h1 className={styles["product__title"]}>{title}</h1>
         <p className={styles["product__excerpt"]}>{excerpt}</p>
 

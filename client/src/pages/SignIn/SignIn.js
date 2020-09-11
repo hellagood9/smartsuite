@@ -54,13 +54,16 @@ const SignIn = () => {
         <h1 className={styles["title"]}>Sign in</h1>
 
         {loading && <Spinner isLoading={loading} />}
-        {error && (
-          <Alert title="Oops ..." type="danger" icon={MdBlock}>
-            <p>Email or Password incorrect</p>
-          </Alert>
-        )}
 
         <form onSubmit={handlerSubmit}>
+          <div className={styles["input-row"]}>
+            {error && (
+              <Alert title="Oops ..." type="danger" icon={MdBlock}>
+                <p>Email or Password incorrect</p>
+              </Alert>
+            )}
+          </div>
+
           <div className={styles["input-row"]}>
             <label htmlFor="email">Email Address</label>
             <input
@@ -92,7 +95,10 @@ const SignIn = () => {
           </div>
 
           <div className={styles["input-row"]}>
-            Dont have an account? <Link to="/signup">Create your account</Link>
+            <span className={styles["text"]}>
+              Dont have an account?{" "}
+              <Link to="/signup">Create your account</Link>
+            </span>
           </div>
         </form>
       </div>

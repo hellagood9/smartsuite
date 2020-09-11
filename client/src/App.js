@@ -21,6 +21,7 @@ const Checkout = lazy(() => import("./pages/Checkout/Checkout"));
 const SignIn = lazy(() => import("./pages/SignIn/SignIn"));
 const SignUp = lazy(() => import("./pages/SignUp/SignUp"));
 const Order = lazy(() => import("./pages/Order/Order"));
+const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
 const App = () => {
   const allState = useSelector((state) => state);
@@ -29,24 +30,26 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Suspense fallback={<Spinner />}>
-            <Route path="/" exact component={Home} />
+        <Suspense fallback={<Spinner />}>
+          <Switch>
+            <Route exact path="/" component={Home} />
             <Route path="/products/:id" component={ProductDetails} />
 
             <Route path="/cart" component={Checkout} />
 
-            <Route exact path="/signin">
+            <Route path="/signin">
               {userInfo ? <Redirect to="/" /> : <SignIn />}
             </Route>
 
-            <Route exact path="/signup">
+            <Route path="/signup">
               {userInfo ? <Redirect to="/" /> : <SignUp />}
             </Route>
 
             <Route path="/order" component={Order} />
-          </Suspense>
-        </Switch>
+
+            <Route path="*" component={NotFound} />
+          </Switch>
+        </Suspense>
       </Router>
     </div>
   );

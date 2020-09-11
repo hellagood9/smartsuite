@@ -61,13 +61,16 @@ const SignUp = (props) => {
         <h1 className={styles["title"]}>Sign Up</h1>
 
         {loading && <Spinner isLoading={loading} />}
-        {error && (
-          <Alert title="Oops ..." type="danger" icon={MdBlock}>
-            <p>Invalid User data</p>
-          </Alert>
-        )}
 
         <form onSubmit={handlerSubmit}>
+          <div className={styles["input-row"]}>
+            {error && (
+              <Alert title="Oops ..." type="danger" icon={MdBlock}>
+                <p>Invalid User data</p>
+              </Alert>
+            )}
+          </div>
+
           <div className={styles["input-row"]}>
             <label htmlFor="email">Name</label>
             <input
@@ -125,7 +128,9 @@ const SignUp = (props) => {
           </div>
 
           <div className={styles["input-row"]}>
-            Already have an account? <Link to="/signin">Sign in</Link>
+            <span className={styles["text"]}>
+              Already have an account? <Link to="/signin">Sign in</Link>
+            </span>
           </div>
         </form>
       </div>

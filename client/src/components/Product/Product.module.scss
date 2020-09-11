@@ -19,7 +19,7 @@
   }
 
   @media only screen and (max-width: 1040px) {
-    width: calc(33% - 16px);
+    width: calc(33.33% - 16px);
   }
 
   @media only screen and (max-width: 740px) {
@@ -109,7 +109,7 @@
 }
 
 .product__title {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.8);
   letter-spacing: 0;
@@ -118,8 +118,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 
 .product__excerpt {
@@ -132,7 +131,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 16px;
+  padding: 8px;
 }
 
 .product__price {

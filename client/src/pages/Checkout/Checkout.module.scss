@@ -1,7 +1,6 @@
 @import "../../styles/animations";
 
 .checkout {
-  margin-top: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,8 +8,10 @@
 
   &__actions {
     position: fixed;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 16px 8px;
     background: #006e41;
     display: flex;
     align-items: center;
@@ -28,7 +29,12 @@
   justify-content: center;
   align-items: center;
   padding: 0 16px;
-  margin-bottom: 40px;
+  margin: 40px;
+
+  @media only screen and (max-width: 740px) {
+    padding: 0;
+    margin: 40px 16px;
+  }
 }
 
 .subtotal {
@@ -38,4 +44,25 @@
   text-transform: uppercase;
   margin: 0 16px;
   letter-spacing: 1px;
+}
+
+.navigate {
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  svg {
+    color: #c0c0c0;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
 }
